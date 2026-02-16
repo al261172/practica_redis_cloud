@@ -1,3 +1,4 @@
+#Agregar dependencias y configuración inicial
 venv/
 __pycache__/
 *.pyc
