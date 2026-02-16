@@ -8,4 +8,3 @@ tests/test_usuarios.py
 requirements.txt
 README.md
 .gitignore
-
