@@ -32,14 +32,14 @@ def normalizar_id_usuario(datos: Dict[str, Any]) -> str:
     validar_id_usuario(id_usuario)
     return id_usuario
 
-def crear_usuario_json(conexion: Redis, usuaario_json: str) -> bool:
+def crear_usuario_json(conexion: Redis, usuario_json: str) -> bool:
     # Crea un nuevo usuario almacenado en Redis a partir de `usuario_json`.
     # - `conexion`: instancia de `Redis`.
     # - `usuario_json`: cadena JSON que representa un objeto usuario.
     # Devuelve `True` si la clave fue creada (no existía), `False` en caso contrario.
     # Lanza `ValueError` si el JSON no representa un objet
 
-    datos = json.loads(usuaario_json)
+    datos = json.loads(usuario_json)
     if not isinstance(datos, dict):
         raise ValueError("El JSON debe ser un objeto.")
 
